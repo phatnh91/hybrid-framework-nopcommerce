@@ -1,33 +1,33 @@
 package javaBasic;
 
-
-
-import org.testng.annotations.Test;
-
 public class Topic_08_For_Foreach {
 
-	
-	@Test
-	public void TC_01_For() {
-		
-//		for (int i = 0; i <= 10; ++i) {
-//			System.out.println(i);
-//		}
-		
-		String [] cityname = {"ha noi", "ha tinh", "sai gon"};
-		for (int i = 0; i < cityname.length; i++) {
-			
-			System.out.println(cityname[i]);
-			
-		}
-		
-		for (String city : cityname) {
-			
-			if(city=="ha tinh") {
-				System.out.println(city);
+	public static void main(String[] args) {
+		int i = 0;
+		for (i = 0 ; i < 5; i++) {
+			System.out.println("For: "+i);
+			if(i==3) {
 				break;
 			}
 			
 		}
+		System.out.println("sau for: " +i);
+		
+		while (i < 5) {
+			
+			System.out.println("While: " +i);
+			i++;
+			if(i==3) {
+				break;
+			}
+			
+		}
+		
+		do { 
+			System.out.println("Do-While: " +i);
+			i++;
+			}while (i<5);
+		
 	}
+
 }
