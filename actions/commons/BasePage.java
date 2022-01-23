@@ -17,7 +17,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class BasePage {
-
+	
+	public static BasePage getBasePageObject() {
+		
+		return new BasePage();
+		
+	}
 	public void openPageUrl(WebDriver driver, String pageUrl) {
 
 		driver.get(pageUrl);
@@ -151,7 +156,7 @@ public class BasePage {
 	}
 
 	public void selectItemInDefaultDropdown(WebDriver driver, String xpathLocator, String textItem) {
-
+		
 		Select select = new Select(getWebElement(driver, xpathLocator));
 		select.selectByValue(textItem);
 
@@ -285,8 +290,6 @@ public class BasePage {
 		action.moveToElement(getWebElement(driver, xpathLocator)).perform();
 	}
 	
-
-
 	public void scrollToBottomPage(WebDriver driver) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript("window.scrollBy(0,document.body.scrollHeight)");
