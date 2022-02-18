@@ -1,0 +1,210 @@
+[DEBUG] [2022-02-17 11:23:23,264] Before invocation of beforeClass
+[DEBUG] [2022-02-17 11:23:23,267] After invocation of beforeClass
+[DEBUG] [2022-02-17 11:23:23,284] Before invocation of User_01_Register
+[DEBUG] [2022-02-17 11:23:23,285] After invocation of User_01_Register
+[DEBUG] [2022-02-17 11:23:23,290] Before invocation of User_02_Login
+[DEBUG] [2022-02-17 11:23:23,291] After invocation of User_02_Login
+[DEBUG] [2022-02-17 11:23:23,291] Before invocation of afterClass
+[DEBUG] [2022-02-17 11:23:23,292] After invocation of afterClass
+[DEBUG] [2022-02-17 11:26:21,392] Before invocation of beforeClass
+[DEBUG] [2022-02-17 11:26:21,395] After invocation of beforeClass
+[DEBUG] [2022-02-17 11:26:21,419] Before invocation of User_01_Register
+[DEBUG] [2022-02-17 11:26:21,420] After invocation of User_01_Register
+[DEBUG] [2022-02-17 11:26:21,424] Before invocation of User_02_Login
+[DEBUG] [2022-02-17 11:26:21,424] After invocation of User_02_Login
+[DEBUG] [2022-02-17 11:26:21,425] Before invocation of afterClass
+[DEBUG] [2022-02-17 11:26:21,425] After invocation of afterClass
+[INFO ] [2022-02-17 11:34:50,048] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 11:35:05,532] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 11:35:06,283] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 11:35:06,430] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 11:35:06,569] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 11:35:06,702] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 11:35:06,818] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 11:35:06,926] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 11:35:07,998] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 11:35:08,075]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 11:35:08,075] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 11:35:08,942] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 11:35:09,585] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 11:35:09,703] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 11:35:09,810] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 11:35:10,687] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 11:36:08,420] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 11:36:22,270] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 11:36:22,989] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 11:36:23,107] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 11:36:23,236] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 11:36:23,356] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 11:36:23,465] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 11:36:23,557] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 11:36:24,532] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 11:36:24,593]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 11:36:24,593] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 11:36:25,458] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 11:36:26,183] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 11:36:26,303] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 11:36:26,405] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 11:36:27,277] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 11:36:27,383]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 12:05:44,022] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 12:05:52,783] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 12:05:53,664] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 12:05:53,806] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 12:05:53,958] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 12:05:54,108] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 12:05:54,227] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 12:05:54,370] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 12:05:55,850] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 12:05:55,934]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 12:05:55,935] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 12:05:56,874] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 12:05:57,617] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 12:05:57,764] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 12:05:57,888] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 12:05:58,892] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 12:05:59,001]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 12:13:45,577] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 12:13:58,697] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 12:13:59,409] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 12:13:59,533] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 12:13:59,644] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 12:13:59,766] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 12:13:59,859] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 12:13:59,967] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 12:14:01,136] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 12:14:01,219]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 12:14:01,220] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 12:14:02,049] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 12:14:02,692] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 12:14:02,805] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 12:14:02,907] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 12:14:03,803] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 12:14:03,911]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 12:14:03,916] Post condition: Close browser 
+[INFO ] [2022-02-17 14:45:51,847] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 14:45:51,847] Pre- condition: Run chrome open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 14:45:51,847] Pre- condition: Run edge open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 14:46:01,854] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 14:46:02,627] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 14:46:02,822] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 14:46:02,954] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 14:46:03,093] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 14:46:03,218] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 14:46:03,362] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 14:46:04,634] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 14:46:04,731]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 14:46:04,731] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 14:46:05,370] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 14:46:05,741] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 14:46:06,265] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 14:46:06,627] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 14:46:06,694] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 14:46:06,832] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 14:46:06,940] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 14:46:07,016] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 14:46:07,270] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 14:46:07,566] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 14:46:07,859] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 14:46:07,951] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 14:46:08,065]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 14:46:08,070] Post condition: Close browser 
+[INFO ] [2022-02-17 14:46:09,183] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 14:46:09,288]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 14:46:09,288] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 14:46:10,327] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 14:46:11,099] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 14:46:11,331] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 14:46:11,632] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 14:46:12,741] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 14:46:12,874]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 14:46:12,877] Post condition: Close browser 
+[INFO ] [2022-02-17 14:46:15,910] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 14:46:16,605] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 14:46:16,774] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 14:46:16,927] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 14:46:17,122] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 14:46:17,298] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 14:46:17,461] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 14:46:18,444] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 14:46:18,522]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 14:46:18,523] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 14:46:19,409] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 14:46:20,082] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 14:46:20,245] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 14:46:20,404] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 14:46:21,321] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 14:46:21,399]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 14:46:21,400] Post condition: Close browser 
+[INFO ] [2022-02-17 15:22:01,606] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 15:22:09,518] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 15:22:10,294] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 15:22:10,476] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 15:22:10,615] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 15:22:10,775] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 15:22:10,889] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 15:22:11,010] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 15:22:12,063] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 15:22:12,178]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 15:22:12,178] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 15:22:13,084] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 15:22:13,839] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 15:22:13,981] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 15:22:14,095] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 15:22:15,042] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 15:22:15,176]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 15:22:15,183] Post condition: Close browser 
+[INFO ] [2022-02-17 15:24:43,467] Pre- condition: Run firefox open: https://demo.nopcommerce.com/
+[INFO ] [2022-02-17 15:24:56,520] User_01_Register - STEP 01: Click to Register Link
+[INFO ] [2022-02-17 15:24:57,218] User_01_Register - STEP 02: Send Key to First Name textbox
+[INFO ] [2022-02-17 15:24:57,352] User_01_Register - STEP 03: Send Key to Last Name textbox
+[INFO ] [2022-02-17 15:24:57,460] User_01_Register - STEP 04: Send Key to Email textbox
+[INFO ] [2022-02-17 15:24:57,584] User_01_Register - STEP 05: Send Key to Password textbox
+[INFO ] [2022-02-17 15:24:57,677] User_01_Register - STEP 06: Send Key to Confirm Password textbox
+[INFO ] [2022-02-17 15:24:57,781] User_01_Register - STEP 07: Click to Register button
+[INFO ] [2022-02-17 15:24:58,774] User_01_Register - STEP 08: Verify registered successsful message
+[INFO ] [2022-02-17 15:24:58,853]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 15:24:58,853] User_01_Register - STEP 09: Click to Log Out Link
+[INFO ] [2022-02-17 15:24:59,724] User_02_Login - STEP 01: Click to Log In Link
+[INFO ] [2022-02-17 15:25:00,424] User_02_Login - STEP 02: Enter a valid email to Email textbox
+[INFO ] [2022-02-17 15:25:00,546] User_02_Login - STEP 03: Enter a valid Password to Password textbox
+[INFO ] [2022-02-17 15:25:00,651] User_02_Login - STEP 04: Click to Log In button
+[INFO ] [2022-02-17 15:25:01,512] User_02_Login - STEP 05: Verify My Account link displayed
+[INFO ] [2022-02-17 15:25:01,606]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 15:25:01,610] Post condition: Close browser 
+[INFO ] [2022-02-17 20:53:25,375] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 20:53:25,378] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 20:56:06,980] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 20:56:06,981] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 20:58:16,106] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 20:58:16,108] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 21:00:14,189] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 21:00:14,190] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 21:00:51,263] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 21:00:51,264] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 21:01:06,203]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 21:01:09,472]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 21:05:52,912] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 21:05:52,913] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 21:06:04,542]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 21:06:07,565]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 21:07:27,711] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 21:07:27,712] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 21:07:38,790]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 21:07:41,966]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 22:18:35,506] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 22:18:35,507] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 22:18:51,189]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 22:18:55,124]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 22:22:44,824] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 22:22:44,825] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 22:22:55,393]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 22:22:58,551]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-17 22:42:55,554] ---------- START delete file in folder ----------
+[INFO ] [2022-02-17 22:42:55,555] ---------- END delete file in folder ----------
+[INFO ] [2022-02-17 22:43:07,465]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-17 22:43:10,739]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-02-18 09:48:52,146] ---------- START delete file in folder ----------
+[INFO ] [2022-02-18 09:48:52,148] ---------- END delete file in folder ----------
+[INFO ] [2022-02-18 09:49:03,587]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-18 09:49:06,256]  -------------------------- FAILED -------------------------- 

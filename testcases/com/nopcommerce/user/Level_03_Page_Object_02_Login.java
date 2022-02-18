@@ -8,39 +8,38 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import page.objects.HomePageObject;
-import page.objects.LoginPageObject;
-import page.objects.RegisterPageObject;
+import commons.nopCommerce.BaseTest;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
-public class Level_03_Page_Object_02_Login {
+public class Level_03_Page_Object_02_Login extends BaseTest {
 	private WebDriver driver;
-	RegisterPageObject registerPage;
-	HomePageObject homePage;
-	LoginPageObject loginPage;
-	String projectPath = System.getProperty("user.dir");
-	String firstName, lastName, existingEmail,invalidEmail, notExistingEmail, validPassword, invalidPassword;
-	
+	UserRegisterPageObject registerPage;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
+	String firstName, lastName, existingEmail, invalidEmail, notExistingEmail, validPassword, invalidPassword;
+
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		
-		driver.get("https://demo.nopcommerce.com/");
+	public void beforeClass(String browserName) {
+//		driver = getBrowserDriver(browserName);
+
 		firstName = "Phat";
 		lastName = "Nguyen";
 		existingEmail = "phatnguyen" + getRandomNumber() + "@qa.team";
+		System.out.println(existingEmail);
 		invalidEmail = "phatnguyen" + getRandomNumber() + "qa.team";
 		notExistingEmail = "phatnguyen" + getRandomNumber() + "@gmail.team";
 		validPassword = "123456";
 		invalidPassword = "654321";
-		
-		homePage = new HomePageObject(driver);
+
+		homePage = new UserHomePageObject(driver);
 		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		registerPage.sendKeysToFirstNameTextbox(firstName);
 		registerPage.sendKeysToLastNameTextbox(lastName);
 		registerPage.sendKeysToEmailTextbox(existingEmail);
@@ -49,24 +48,21 @@ public class Level_03_Page_Object_02_Login {
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		registerPage.clickToLogOutLink();
-		
-		
+
 	}
+
 	@Test
 	public void Login_01_Empty_Data() {
 		System.out.println("Login_01 - step 01: Click to Login Link");
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		System.out.println("Login_01 - step 02: Click to Login Button");
 		loginPage.clickToLoginButton();
 		System.out.println("Login_01 - step 03: Verify Required Email Message");
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Please enter your email");
-		
-		
-		
-		
+
 	}
-	
+
 	@Test
 	public void Login_02_Invalid_Email() {
 		System.out.println("Login_02 - step 01: Click to Login Link");
@@ -79,8 +75,7 @@ public class Level_03_Page_Object_02_Login {
 		Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email");
 
 	}
-	
-	
+
 	@Test
 	public void Login_03_Email_Not_Found() {
 		System.out.println("Login_03 - step 01: Click to Login Link");
@@ -90,9 +85,10 @@ public class Level_03_Page_Object_02_Login {
 		System.out.println("Login_03 - step 03: Click to Login Button");
 		loginPage.clickToLoginButton();
 		System.out.println("Login_03 - step 04: Verify Summary Error Message");
-		Assert.assertEquals(loginPage.getSummaryErrorMessage(), "Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
+		Assert.assertEquals(loginPage.getSummaryErrorMessage(),
+				"Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
 	}
-	
+
 	@Test
 	public void Login_04_Existing_Email_Empty_Password() {
 		System.out.println("Login_04 - step 01: Click to Login Link");
@@ -102,12 +98,13 @@ public class Level_03_Page_Object_02_Login {
 		System.out.println("Login_04 - step 03: Click to Login Button");
 		loginPage.clickToLoginButton();
 		System.out.println("Login_04 - step 04: Verify Summary Error Message");
-		Assert.assertEquals(loginPage.getSummaryErrorMessage(),"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+		Assert.assertEquals(loginPage.getSummaryErrorMessage(),
+				"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}
-	
+
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
-		
+
 		System.out.println("Login_05 - step 01: Click to Login Link");
 		homePage.clickToLoginLink();
 		System.out.println("Login_05 - step 02: Input a valid Email");
@@ -117,10 +114,11 @@ public class Level_03_Page_Object_02_Login {
 		System.out.println("Login_05 - step 04: Click to Login Button");
 		loginPage.clickToLoginButton();
 		System.out.println("Login_05 - step 05: Verify Summary Error Message");
-		Assert.assertEquals(loginPage.getSummaryErrorMessage(),"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
-		
+		Assert.assertEquals(loginPage.getSummaryErrorMessage(),
+				"Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+
 	}
-	
+
 	@Test
 	public void Login_06_Valid_Email_And_Password() {
 		System.out.println("Login_06 - step 01: Click to Login Link");
@@ -133,18 +131,17 @@ public class Level_03_Page_Object_02_Login {
 		loginPage.clickToLoginButton();
 		System.out.println("Login_06 - step 05: Verify Homepage is Displayed");
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-		
+
 	}
-	
-	
+
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
 		driver.quit();
 	}
+
 	public int getRandomNumber() {
 		Random rand = new Random();
 		return rand.nextInt(9999);
 	}
-
 
 }

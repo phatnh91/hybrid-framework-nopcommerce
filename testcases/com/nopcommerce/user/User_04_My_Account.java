@@ -14,7 +14,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import commons.BasePage;
+import commons.nopCommerce.BasePage;
 
 public class User_04_My_Account extends BasePage {
 	WebDriver driver;
@@ -261,11 +261,7 @@ public class User_04_My_Account extends BasePage {
 		}
 		return ratingPercent;
 	}
-	public int getRandomNumber() {
-		Random rand = new Random();
-		return rand.nextInt(9999);
-	}
-
+	
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
 		driver.quit();

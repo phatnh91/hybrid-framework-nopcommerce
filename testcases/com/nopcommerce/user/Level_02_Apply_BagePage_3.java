@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import commons.BasePage;
+import commons.nopCommerce.BasePage;
 
 public class Level_02_Apply_BagePage_3 extends BasePage {
 	WebDriver driver;
@@ -123,10 +123,7 @@ public class Level_02_Apply_BagePage_3 extends BasePage {
 
 	
 
-	public int getRandomNumber() {
-		Random rand = new Random();
-		return rand.nextInt(9999);
-	}
+	
 
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {

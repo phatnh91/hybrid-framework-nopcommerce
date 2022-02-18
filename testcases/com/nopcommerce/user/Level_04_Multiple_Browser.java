@@ -13,23 +13,23 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import commons.BaseTest;
-import page.objects.HomePageObject;
-import page.objects.LoginPageObject;
-import page.objects.RegisterPageObject;
+import commons.nopCommerce.BaseTest;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_04_Multiple_Browser extends BaseTest {
 	private WebDriver driver;
-	RegisterPageObject registerPage;
-	HomePageObject homePage;
-	LoginPageObject loginPage;
+	UserRegisterPageObject registerPage;
+	UserHomePageObject homePage;
+	UserLoginPageObject loginPage;
 	private String firstName, lastName, existingEmail,invalidEmail, notExistingEmail, validPassword, invalidPassword;
 	
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		
-		driver = getBrowserDriver(browserName);
+//		driver = getBrowserDriver(browserName);
 		firstName = "Phat";
 		lastName = "Nguyen";
 		existingEmail = "phatnguyen" + getRandomNumber() + "@qa.team";
@@ -38,9 +38,9 @@ public class Level_04_Multiple_Browser extends BaseTest {
 		validPassword = "123456";
 		invalidPassword = "654321";
 		
-		homePage = new HomePageObject(driver);
+		homePage = new UserHomePageObject(driver);
 		homePage.clickToRegisterLink();
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPageObject(driver);
 		registerPage.sendKeysToFirstNameTextbox(firstName);
 		registerPage.sendKeysToLastNameTextbox(lastName);
 		registerPage.sendKeysToEmailTextbox(existingEmail);
@@ -56,7 +56,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 	public void Login_01_Empty_Data() {
 		System.out.println("Login_01 - step 01: Click to Login Link");
 		homePage.clickToLoginLink();
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		System.out.println("Login_01 - step 02: Click to Login Button");
 		loginPage.clickToLoginButton();
 		System.out.println("Login_01 - step 03: Verify Required Email Message");
@@ -123,7 +123,7 @@ public class Level_04_Multiple_Browser extends BaseTest {
 	
 	@Test
 	public void Login_06_Valid_Email_And_Password() {
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPageObject(driver);
 		System.out.println("Login_06 - step 01: Click to Login Link");
 		homePage.clickToLoginLink();
 		System.out.println("Login_06 - step 02: Input a valid Email");
