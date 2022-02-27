@@ -41,5 +41,12 @@
 	<classpathentry kind="lib" path="libExtentV2/mongodb-driver-3.0.4.jar"/>
 	<classpathentry kind="lib" path="libExtentV2/mongodb-driver-core-3.0.4.jar"/>
 	<classpathentry kind="lib" path="libExtentV2/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/commons-lang3-3.5.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/generex-1.0.2.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/javafaker-1.0.1.jar"/>
+	<classpathentry kind="lib" path="libJavaFaker/snakeyaml-1.23.jar"/>
+	<classpathentry kind="lib" path="libJson/jackson-annotations-2.10.0.jar"/>
+	<classpathentry kind="lib" path="libJson/jackson-core-2.10.0.jar"/>
+	<classpathentry kind="lib" path="libJson/jackson-databind-2.10.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

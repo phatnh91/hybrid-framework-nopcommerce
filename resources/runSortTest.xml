@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SauceLab">
+
+<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+<!-- <listener class-name="report.config.ExtentTestListener"/> -->
+</listeners>
+ <parameter name="url" value="https://www.saucedemo.com/"/>
+  
+  <test name="Run on Firefox">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.nopcommerce.user.Level_15_Sort"/>
+    </classes>
+ 
+  </test> 
+  
+
+</suite>

@@ -77,9 +77,9 @@ public class User_04_My_Account extends BasePage {
 		clickToElement(driver, "//input[@id='gender-male']");
 		sendKeysToElement(driver, "//input[@id='FirstName']", firstName);
 		sendKeysToElement(driver, "//input[@id='LastName']", lastName);
-		selectItemInDefaultDropdown(driver, "//select[@name='DateOfBirthDay']", dateOfBirth);
-		selectItemInDefaultDropdown(driver, "//select[@name='DateOfBirthMonth']", monthOfBirth);
-		selectItemInDefaultDropdown(driver, "//select[@name='DateOfBirthYear']", yearOfBirth);
+		selectItemInDefaultDropdownByValue(driver, "//select[@name='DateOfBirthDay']", dateOfBirth);
+		selectItemInDefaultDropdownByValue(driver, "//select[@name='DateOfBirthMonth']", monthOfBirth);
+		selectItemInDefaultDropdownByValue(driver, "//select[@name='DateOfBirthYear']", yearOfBirth);
 		sendKeysToElement(driver, "//input[@id='Email']", emailAddress);
 		sendKeysToElement(driver, "//input[@id='Company']", company);
 		clickToElement(driver, "//button[@id='save-info-button']");
@@ -105,7 +105,7 @@ public class User_04_My_Account extends BasePage {
 		sendKeysToElement(driver, "//input[@id='Address_LastName']", lastName);
 		sendKeysToElement(driver, "//input[@id='Address_Email']", emailAddress);
 		sendKeysToElement(driver, "//input[@id='Address_Company']", company);
-		selectItemInDefaultDropdown(driver, "//select[@id='Address_CountryId']", "82");
+		selectItemInDefaultDropdownByValue(driver, "//select[@id='Address_CountryId']", "82");
 		sendKeysToElement(driver, "//input[@id='Address_City']", city);
 		sendKeysToElement(driver, "//input[@id='Address_Address1']", address1);
 		sendKeysToElement(driver, "//input[@id='Address_Address2']", address2);

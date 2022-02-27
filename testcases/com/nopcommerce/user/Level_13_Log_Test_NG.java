@@ -91,7 +91,7 @@ public class Level_13_Log_Test_NG extends BaseTest {
 	public void afterClass() {
 		
 		ExtentTestManager.getTest().log(LogStatus.INFO, "Post condition: Close browser ");
-		driver.quit();
+		cleanDriverInstance();
 	}
 
 	

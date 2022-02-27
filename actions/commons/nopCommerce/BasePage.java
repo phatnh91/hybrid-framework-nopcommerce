@@ -1,6 +1,12 @@
 package commons.nopCommerce;
 
 import java.io.File;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -8,20 +14,25 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.hrm.LoginPageObject;
+import pageObjects.hrm.PageGenerator;
 import pageObjects.nopCommerce.user.UserAddressPageObject;
 import pageObjects.nopCommerce.user.UserCustomerInfoPageObject;
 import pageObjects.nopCommerce.user.UserPageGeneratorManager;
 import pageObjects.nopCommerce.user.UserPasswordPageObject;
 import pageObjects.nopCommerce.user.UserRewardPointPageObject;
+import pageUIs.hrm.BasePageUI;
 import pageUIs.nopCommerce.user.UserBasePageUI;
 
 public class BasePage {
@@ -205,10 +216,17 @@ public class BasePage {
 		element.sendKeys(textValue);
 	}
 
-	public void selectItemInDefaultDropdown(WebDriver driver, String xpathLocator, String textItem) {
+	public void selectItemInDefaultDropdownByValue(WebDriver driver, String xpathLocator, String textItem) {
 
 		Select select = new Select(getWebElement(driver, xpathLocator));
 		select.selectByValue(textItem);
+
+	}
+
+	public void selectItemInDefaultDropdownByVisibleText(WebDriver driver, String xpathLocator, String textItem) {
+
+		Select select = new Select(getWebElement(driver, xpathLocator));
+		select.selectByVisibleText(textItem);
 
 	}
 
@@ -417,11 +435,11 @@ public class BasePage {
 		return false;
 	}
 
-	public boolean checkElementUndisplayed(WebDriver driver,String xpathLocator) {
+	public boolean checkElementUndisplayed(WebDriver driver, String xpathLocator) {
 		boolean status = false;
-		changeImplicitwait(driver,GlobalConstants.SHORT_TIMEOUT);
+		changeImplicitwait(driver, GlobalConstants.SHORT_TIMEOUT);
 		List<WebElement> elements = driver.findElements(By.xpath(xpathLocator));
-		changeImplicitwait(driver,GlobalConstants.LONG_TIMEOUT);
+		changeImplicitwait(driver, GlobalConstants.LONG_TIMEOUT);
 
 		if (elements.size() == 0) {
 			status = true;
@@ -436,7 +454,7 @@ public class BasePage {
 
 	}
 
-	private void changeImplicitwait(WebDriver driver,long timeOut) {
+	private void changeImplicitwait(WebDriver driver, long timeOut) {
 
 		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
 
@@ -558,10 +576,105 @@ public class BasePage {
 		sendKeysToElement(driver, UserBasePageUI.UPLOAD_FILE, fullFileName);
 	}
 
+	public Set<Cookie> getAllCookies(WebDriver driver) {
+
+		return driver.manage().getCookies();
+	}
+
+	public LoginPageObject logOutToSytem(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.WELCOME_ICON);
+		clickToElement(driver, BasePageUI.WELCOME_ICON);
+		waitForElementClickable(driver, BasePageUI.LOGOUT_LINK);
+		clickToElement(driver, BasePageUI.LOGOUT_LINK);
+		return PageGenerator.getLoginPage(driver);
+
+	}
+
+	public void openMenuHeaderByName(WebDriver driver, String menuName) {
+		waitForElementClickableByDynamicLocator(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+		clickToElementByDynamicLocator(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+	}
+
+	public void setAllCookies(WebDriver driver, Set<Cookie> allCookies) {
+		for (Cookie cookie : allCookies) {
+			driver.manage().addCookie(cookie);
+		}
+	}
+
+	public boolean isJQueryAjaxLoadedSuccess(WebDriver driver) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+			@Override
+			public Boolean apply(WebDriver driver) {
+				return (Boolean) jsExecutor.executeScript("return (window.jQuery != null) && (jQuery.active === 0);");
+			}
+		};
+		return explicitWait.until(jQueryLoad);
+	}
+
 	public static int getRandomNumber() {
 		Random rand = new Random();
 		return rand.nextInt(9999);
 
+	}
+
+	public boolean isDataDateSortedAscending(WebDriver driver, String xpathLocator) {
+		ArrayList<Date> arrayList = new ArrayList<Date>();
+
+		List<WebElement> elementList = driver.findElements(By.xpath(xpathLocator));
+		for (WebElement element : elementList) {
+
+			arrayList.add(convertStringToDate(element.getText()));
+
+		}
+
+		ArrayList<Date> sortedList = new ArrayList<Date>();
+		for (Date child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(sortedList);
+		return arrayList.equals(sortedList);
+	}
+
+	public boolean isDataDateSortedDescending(WebDriver driver, String xpathLocator) {
+		ArrayList<Date> arrayList = new ArrayList<Date>();
+
+		List<WebElement> elementList = driver.findElements(By.xpath(xpathLocator));
+		for (WebElement element : elementList) {
+
+			arrayList.add(convertStringToDate(element.getText()));
+
+		}
+
+		ArrayList<Date> sortedList = new ArrayList<Date>();
+		for (Date child : arrayList) {
+			sortedList.add(child);
+		}
+		Collections.sort(sortedList);
+		Collections.reverse(sortedList);
+
+		return arrayList.equals(sortedList);
+	}
+
+	public Date convertStringToDate(String dateInString) {
+		dateInString = dateInString.replace(",", "");
+		SimpleDateFormat formatter = new SimpleDateFormat("MMM dd yyyy");
+		Date date = null;
+		try {
+			date = formatter.parse(dateInString);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return date;
+	}
+
+	public String getRandomEmail() {
+		return "phatnguyen" + getRandomNumberByDateTime() + "@qa.team";
+	}
+
+	private long getRandomNumberByDateTime() {
+		return Calendar.getInstance().getTimeInMillis() % 100000;
 	}
 
 	public void sleepInSecond(long second) {

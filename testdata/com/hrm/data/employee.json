@@ -1,0 +1,15 @@
+{
+"firstname":"phat",
+"lastname":"nguyen",
+"fullname":"phat nguyen",
+"username":"phatnguyen",
+"password":"Xoai!123",
+"adminusername":"Admin",
+"adminpassword":"admin123",
+"statusdropdown":"Enabled",
+"email":"phatnguyen@qa.team",
+"ContactDetail":{
+"editFirstname":"Vu",
+"editLastname":"nguyen"
+}
+}
